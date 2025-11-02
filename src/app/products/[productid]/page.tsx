@@ -1,4 +1,25 @@
+<<<<<<< HEAD
 // import styles from './style.module.scss;
+=======
+import { Metadata } from 'next';
+
+type Props = {
+	params: Promise<{ productid: string }>
+}
+export const generateMetadata = async (
+	{params}: Props): Promise<{ title: string }> => {
+	const id = (await params).productid;
+	const title = await new Promise((resolve) => {
+		setTimeout(() => {
+			resolve(`IPhone ${id}`);
+		});
+	});
+	return {
+		title: `Product ${title}`
+	};
+};
+
+>>>>>>> a956466 (metadata)
 export default async function ProductDetails({params}: { params: Promise<{ productid: string }> }) {
 	const productid = (await params).productid;
 	return (
@@ -7,6 +28,7 @@ export default async function ProductDetails({params}: { params: Promise<{ produ
 		</div>
 	);
 };
+<<<<<<< HEAD
 
 // const ProductDetails = () => {
 // 	return (
@@ -17,3 +39,5 @@ export default async function ProductDetails({params}: { params: Promise<{ produ
 // };
 //
 // export default ProductDetails;
+=======
+>>>>>>> a956466 (metadata)
