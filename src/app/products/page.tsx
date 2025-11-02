@@ -1,14 +1,21 @@
-// import styles from './style.module.scss;
+// import styles from './styles.css;
+import Link from 'next/link';
 
 const Products = () => {
+	const productId = [
+		{id: 1,title: 'Products 1'},
+		{id: 2,title: 'Products 2'},
+		{id: 3,title: 'Products 3'},
+		{id: 4,title: 'Products 4'}
+	];
+
+
 	return (
 		<div>
-			<h1>Products</h1>
-			<h2>Product 1</h2>
-			<h2>Product 2</h2>
-			<h2>Product 3</h2>
-			<h2>Product 4</h2>
-			<h2>Product 5</h2>
+			<Link href="/">Home</Link>
+			{productId.map((product) => (
+				<h1 key={product.id}><Link href={`./products/${product.id}`}>{product.title}</Link></h1>
+			))}
 		</div>
 	);
 };

@@ -1,6 +1,4 @@
-<<<<<<< HEAD
-// import styles from './style.module.scss;
-=======
+// import styles from './styles.css;
 import { Metadata } from 'next';
 
 type Props = {
@@ -19,7 +17,6 @@ export const generateMetadata = async (
 	};
 };
 
->>>>>>> a956466 (metadata)
 export default async function ProductDetails({params}: { params: Promise<{ productid: string }> }) {
 	const productid = (await params).productid;
 	return (
@@ -28,16 +25,3 @@ export default async function ProductDetails({params}: { params: Promise<{ produ
 		</div>
 	);
 };
-<<<<<<< HEAD
-
-// const ProductDetails = () => {
-// 	return (
-// 		<div>
-// 			Details Page Products
-// 		</div>
-// 	);
-// };
-//
-// export default ProductDetails;
-=======
->>>>>>> a956466 (metadata)

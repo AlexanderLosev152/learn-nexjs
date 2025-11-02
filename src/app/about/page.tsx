@@ -1,10 +1,8 @@
-<<<<<<< HEAD
-// import styles from './style.module.scss;
-=======
+// import styles from './styles.css;
+
 export const metadata = {
 	title: 'About Codevolution'
 };
->>>>>>> a956466 (metadata)
 
 const About = () => {
 	return (

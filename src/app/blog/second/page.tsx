@@ -1,4 +1,4 @@
-// import styles from './style.module.scss;
+// import styles from './styles.css;
 
 const Second = () => {
 	return (

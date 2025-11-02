@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-// import styles from './style.module.scss;
-=======
 import { Metadata } from 'next';
 
 export const metadata: { title: { absolute: string } } = {
@@ -8,14 +5,12 @@ export const metadata: { title: { absolute: string } } = {
 		absolute: 'Blog'
 	}
 };
->>>>>>> a956466 (metadata)
 
-const Blog = () => {
-	return (
-		<div>
-			Blog page
-		</div>
-	);
+export default async function Blog() {
+	await new Promise((resolve) => {
+		setTimeout(() => {
+			resolve('intentional delay');
+		},2000);
+	});
+	return <div>Blog</div>;
 };
-
-export default Blog;

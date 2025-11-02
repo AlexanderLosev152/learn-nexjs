@@ -1,11 +1,11 @@
-// import styles from './style.module.scss;
+import Link from 'next/link';
 
-const Home = () => {
-	return (
-		<div>
-			Welcome to home !!!
-		</div>
-	);
+export default function Home() {
+	return <>
+		<h1>Hello Home !!!</h1>
+		<Link href="./blog">Blog</Link>
+		<Link href="./products">Product</Link>
+		<Link href="./articles/breaking-news-123?lang=en">Read in English</Link>
+		<Link href="./articles/breaking-news-123?lang=fr">Read in French</Link>
+	</>;
 };
-
-export default Home;
